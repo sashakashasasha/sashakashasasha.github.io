@@ -80,3 +80,11 @@ footer {
     margin-right: auto; /* Сдвиг текста влево */
 }
 
+.footer-column a {
+    color: #888; /* Серый цвет для ссылок */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+.footer-column a:hover {
+    color: #555; /* Цвет ссылки при наведении */
+}
