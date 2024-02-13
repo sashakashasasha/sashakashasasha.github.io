@@ -81,10 +81,10 @@ footer {
 }
 
 .footer-column a {
-    color: #888; /* Серый цвет для ссылок */
-    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: rgb(128,150,178); 
+    text-decoration: none;
 }
 
 .footer-column a:hover {
-    color: #555; /* Цвет ссылки при наведении */
+    color: #555; 
 }
