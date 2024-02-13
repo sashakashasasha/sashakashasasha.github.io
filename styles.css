@@ -74,10 +74,10 @@ footer {
     padding: 0 20px;
 }
 
-/* Стили для текста истории создания */
+
 .main-text {
-    text-align: left; /* Выравнивание текста по левому краю */
-    margin-right: auto; /* Сдвиг текста влево */
+    text-align: left; 
+    margin-right: auto; 
 }
 
 .footer-column a {
