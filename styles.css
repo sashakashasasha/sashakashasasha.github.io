@@ -2,16 +2,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0; /* Добавляем фоновый цвет */
 }
 
 header, nav, footer {
     text-align: center;
     padding: 10px;
     color: #0000CC;
+    background-color: #fff; /* Добавляем фоновый цвет */
+    border-bottom: 1px solid #ccc; /* Добавляем разделительную линию */
 }
 
 main {
-    padding: 10px;
+    padding: 20px; /* Увеличиваем отступы для содержимого */
 }
 
 nav ul {
@@ -28,6 +31,8 @@ nav ul li {
 section img {
     max-width: 100%;
     height: auto;
+    display: block; /* Используем display: block для изображений */
+    margin: 0 auto 20px; /* Выравниваем изображения по центру */
 }
 
 /* Стили для формы обратной связи */
@@ -46,6 +51,8 @@ textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
+    border: 1px solid #ccc; /* Добавляем рамку */
+    box-sizing: border-box; /* Учитываем размеры рамки в общем размере элемента */
 }
 
 button[type="submit"] {
@@ -67,24 +74,52 @@ footer {
     background-color: #0000CC;
     text-align: center;
     color: #fff;
+    padding: 20px;
 }
 
 .footer-column {
-    flex: flex-grow;
+    flex: 1;
     padding: 0 20px;
 }
 
-
-.main-text {
-    text-align: left; 
-    margin-right: auto; 
-}
-
 .footer-column a {
-    color: #CCCCCC; 
+    color: #CCCCCC;
     text-decoration: none;
 }
 
 .footer-column a:hover {
-    color: #555; 
+    color: #555;
+}
+
+/* Flexbox */
+main {
+    display: flex;
+    flex-wrap: wrap; /* Оборачиваем элементы на мобильных устройствах */
+}
+
+.main-text {
+    flex: 1; /* Отводим максимальное пространство для текста */
+    margin-right: 20px; /* Добавляем отступ между текстом и изображениями */
+}
+
+/* Позиционирование */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Устанавливаем z-index для навигационного меню */
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-right: 0;
+    }
+    nav ul li:last-child {
+        margin-bottom: 20px;
+    }
+    .footer-column {
+        flex: 100%; /* При разрешении до 768px ширина столбца будет 100% */
+        margin-bottom: 20px;
+    }
 }
