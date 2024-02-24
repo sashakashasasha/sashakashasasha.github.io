@@ -13,10 +13,6 @@ header, nav, footer {
     border-bottom: 1px solid #ccc; /* Добавляем разделительную линию */
 }
 
-header h1 {
-    color: #555;
-}
-
 main {
     padding: 20px; /* Увеличиваем отступы для содержимого */
 }
@@ -38,6 +34,12 @@ section img {
     display: block;
     margin: 0 auto 20px;
     margin-right: 20px; /* Сдвигаем картинки влево */
+}
+
+section img:first-child {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 /* Стили для формы обратной связи */
