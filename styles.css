@@ -31,8 +31,9 @@ nav ul li {
 section img {
     max-width: 100%;
     height: auto;
-    display: block; /* Используем display: block для изображений */
-    margin: 0 auto 20px; /* Выравниваем изображения по центру */
+    display: block;
+    margin: 0 auto 20px;
+    margin-right: -20px; /* Сдвигаем картинки влево */
 }
 
 /* Стили для формы обратной связи */
