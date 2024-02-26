@@ -110,20 +110,4 @@ nav {
     z-index: 1000; /* Устанавливаем z-index для навигационного меню */
 }
 
-/* Медиа-запросы для адаптивного дизайна */
-@media (max-width: 768px) {
-    section img {
-        margin-right: 0; 
-    }
-    nav ul li {
-        display: block;
-        margin-right: 0;
-    }
-    nav ul li:last-child {
-        margin-bottom: 20px;
-    }
-    .footer-column {
-        flex: 100%; /* При разрешении до 768px ширина столбца будет 100% */
-        margin-bottom: 20px;
-    }
-}
+
