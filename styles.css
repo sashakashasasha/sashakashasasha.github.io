@@ -71,8 +71,25 @@ nav ul li:last-child {
 </main>
 
 /* Модификатор !important */
+/* Стили для подвала */
 footer {
-    padding: 20px;
-    color: #fff;
+    display: flex;
+    justify-content: space-between;
     background-color: #0000CC;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-column {
+    padding: 0 20px;
+}
+
+.footer-column a {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #555;
 }
