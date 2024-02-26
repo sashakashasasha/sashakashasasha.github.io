@@ -33,7 +33,7 @@ section img {
     height: auto;
     display: block;
     margin: 0 auto 20px;
-    margin-right: 0; /* Изменяем margin-right на 0, чтобы сдвинуть изображения влево */
+    margin-right: 0; /* Устанавливаем margin-right на 0, чтобы сместить изображения влево */
 }
 
 /* Стили для формы обратной связи */
