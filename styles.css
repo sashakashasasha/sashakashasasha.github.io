@@ -1,3 +1,4 @@
+/* Элементный селектор */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,47 +6,27 @@ body {
     background-color: #f0f0f0; /* Добавляем фоновый цвет */
 }
 
-header, nav, footer {
-    text-align: center;
-    padding: 10px;
-    color: #0000CC;
-    background-color: #fff; /* Добавляем фоновый цвет */
-    border-bottom: 1px solid #ccc; /* Добавляем разделительную линию */
+/* Классовый селектор */
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
 }
 
-main {
+.footer-column a {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #555;
+}
+
+/* Идентификаторный селектор */
+#main {
     padding: 20px; /* Увеличиваем отступы для содержимого */
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-/* Стили для главной страницы */
-section img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
-    margin-right: 0; /* Устанавливаем margin-right на 0, чтобы сместить изображения влево */
-}
-
-/* Стили для формы обратной связи */
-form {
-    margin-top: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
+/* Атрибутный селектор */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -68,46 +49,10 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Стили для подвала */
-footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: #0000CC;
-    text-align: center;
-    color: #fff;
-    padding: 20px;
-}
-
-.footer-column {
-    flex: 1;
-    padding: 0 20px;
-}
-
-.footer-column a {
-    color: #CCCCCC;
-    text-decoration: none;
-}
-
-.footer-column a:hover {
-    color: #555;
-}
-
-/* Flexbox */
-main {
-    display: flex;
-    flex-wrap: wrap; /* Оборачиваем элементы на мобильных устройствах */
-}
-
-.main-text {
-    flex: 1; /* Отводим максимальное пространство для текста */
-    margin-right: 20px; /* Добавляем отступ между текстом и изображениями */
-}
-
-/* Позиционирование */
+/* Псевдо-класс */
 nav {
     position: sticky;
     top: 0;
     z-index: 1000; /* Устанавливаем z-index для навигационного меню */
 }
-
 
