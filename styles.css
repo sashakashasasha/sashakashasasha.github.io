@@ -56,3 +56,23 @@ nav {
     z-index: 1000; /* Устанавливаем z-index для навигационного меню */
 }
 
+/* Несколько вариантов комбинации селекторов */
+header h1 {
+    color: red;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+/* Inline указание стилей с помощью атрибута style */
+<main style="background-color: #ddd;">
+    <p style="font-size: 18px;">Этот текст имеет размер 18px.</p>
+</main>
+
+/* Модификатор !important */
+footer {
+    padding: 40px !important;
+    color: white !important;
+    background-color: black !important;
+}
