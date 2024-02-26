@@ -33,7 +33,7 @@ section img {
     height: auto;
     display: block;
     margin: 0 auto 20px;
-    margin-right: 20px; /* Сдвигаем картинки влево */
+    margin-right: 0; /* Сдвигаем картинки влево */
 }
 
 section img:first-child {
