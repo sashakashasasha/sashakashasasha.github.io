@@ -9,7 +9,7 @@ header, nav, footer {
     text-align: center;
     padding: 10px;
     color: #0000CC;
-    background-color: #fff; /* Добавляем фоновый цвет */
+    background-color: #f0f0f0; /* Добавляем фоновый цвет */
     border-bottom: 1px solid #ccc; /* Добавляем разделительную линию */
 }
 
@@ -145,7 +145,13 @@ p:first-letter {
 /*псевдо-класс*/
 a:hover {
     text-decoration: none;
+    text-align: center;
 }
+
+.fig {
+    text-align: center; /* Выравнивание по центру */ 
+}
+
 
 /* Медиа-запросы для адаптивного дизайна */
 @media (max-width: 768px) {
