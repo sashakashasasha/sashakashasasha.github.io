@@ -1,4 +1,3 @@
-/* Элементный селектор */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,27 +5,53 @@ body {
     background-color: #f0f0f0; /* Добавляем фоновый цвет */
 }
 
-/* Классовый селектор */
-.footer-column {
-    flex: 1;
-    padding: 0 20px;
+header, nav, footer {
+    text-align: center;
+    padding: 10px;
+    color: #0000CC;
+    background-color: #fff; /* Добавляем фоновый цвет */
+    border-bottom: 1px solid #ccc; /* Добавляем разделительную линию */
 }
 
-.footer-column a {
-    color: #CCCCCC;
-    text-decoration: none;
-}
-
-.footer-column a:hover {
-    color: #555;
-}
-
-/* Идентификаторный селектор */
-#main {
+main {
     padding: 20px; /* Увеличиваем отступы для содержимого */
 }
 
-/* Атрибутный селектор */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Стили для главной страницы */
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    margin-right: 20px; /* Сдвигаем картинки влево */
+}
+
+section img:first-child {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Стили для формы обратной связи */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -49,27 +74,6 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Псевдо-класс */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Устанавливаем z-index для навигационного меню */
-}
-
-/* Несколько вариантов комбинации селекторов */
-header h1 {
-    color: red;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
-}
-
-/* Inline указание стилей с помощью атрибута style */
-<main style="background-color: #ddd;">
-    <p style="font-size: 18px;">Этот текст имеет размер 18px.</p>
-</main>
-
 /* Стили для подвала */
 footer {
     display: flex;
@@ -81,6 +85,7 @@ footer {
 }
 
 .footer-column {
+    flex: 1;
     padding: 0 20px;
 }
 
@@ -91,4 +96,68 @@ footer {
 
 .footer-column a:hover {
     color: #555;
+}
+
+/* Flexbox */
+main {
+    display: flex;
+    flex-wrap: wrap; /* Оборачиваем элементы на мобильных устройствах */
+    color: #ff00d4;
+}
+
+.main-text {
+    flex: 1; /* Отводим максимальное пространство для текста */
+    margin-right: 20px; /* Добавляем отступ между текстом и изображениями */
+    color: #000000 !important;
+}
+
+/*использование important*/
+
+/* Позиционирование */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Устанавливаем z-index для навигационного меню */
+}
+
+.highlight {
+    font-family: Arial, sans-serif;
+    color: rgb(105, 3, 64); /* Цвет текста */
+    font-weight: 600; /* Жирное начертание */
+}
+
+#welcome {
+    background-color: blue;
+    color: rgb(255, 255, 255); /* Цвет текста */
+}
+
+
+div[title] {
+    border-bottom: solid 1px black;
+    background-color: rgb(65, 99, 212);
+}
+
+/*псевдо-элемент*/
+p:first-letter {
+	font-size: 200%;
+}
+
+/*псевдо-класс*/
+a:hover {
+    text-decoration: none;
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-right: 0;
+    }
+    nav ul li:last-child {
+        margin-bottom: 20px;
+    }
+    .footer-column {
+        flex: 100%; /* При разрешении до 768px ширина столбца будет 100% */
+        margin-bottom: 20px;
+    }
 }
