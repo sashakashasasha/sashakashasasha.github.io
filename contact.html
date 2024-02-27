@@ -4,6 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Обратная связь</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+          background-color: #eaf4f4;
+          font-size: 105%; 
+          font-family: Verdana, Arial, Helvetica, sans-serif; 
+        }
+      </style>
 </head>
 <body>
     <header>
@@ -19,7 +26,8 @@
 
     <main>
         <section>
-            <h2>Заполните форму обратной связи</h2>
+            <h2 id="welcome">Заполните форму обратной связи</h2>
+            <p style="font-size: 70%; color: blue;">Будьте котиками пожалуйста</p>
             <form action="submit_form.php" method="post">
                 <label for="name">Ваше имя:</label>
                 <input type="text" id="name" name="name" required>
@@ -54,7 +62,7 @@
             <p><a href="https://olymp.hse.ru/">Олимпиады</a></p>
         </div>
       
-        <div class="footer-column">
+        <div class="footer-column" title="About">
             <h3>Ресурсы</h3>
             <p><a href="https://library.hse.ru/">Библиотека</a></p>
             <p><a href="https://mc.hse.ru/">Медиацентр</a></p>
