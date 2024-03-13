@@ -56,6 +56,22 @@
 
              <p class="fig"><img src="world.jpg" width="500" height="400"></p>
             <br> 
+            <div id="map" style="height: 400px;"></div>
+
+        <script>
+            // Создаем карту и устанавливаем ее центр и масштаб
+            var map = L.map('map').setView([55.7558, 37.6173], 10);
+
+            // Добавляем слой OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Добавляем маркер на карту
+            L.marker([55.7558, 37.6173]).addTo(map)
+                .bindPopup('Москва, Россия')
+                .openPopup();
+        </script>
         </section>
     </main>
 
