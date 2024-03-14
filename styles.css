@@ -208,3 +208,8 @@ nav {
     text-align: center;
     color: #0000CC; /* Цвет текста */
 }
+
+.record-button.recording {
+    background-color: red; 
+    color: white; 
+}
