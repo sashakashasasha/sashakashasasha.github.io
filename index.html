@@ -62,7 +62,7 @@
 
         <script>
             // Создаем карту и устанавливаем ее центр и масштаб
-            var map = L.map('map').setView([55.727209, 37.634552], 16);
+            var map = L.map('map').setView([55.803435, 37.410400], 16);
 
             // Добавляем слой OpenStreetMap
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -70,7 +70,7 @@
             }).addTo(map);
 
             // Добавляем маркер на карту
-            L.marker([55.727209, 37.634552]).addTo(map)
+            L.marker([55.803435, 37.410400]).addTo(map)
                 .bindPopup('МИЭМ НИУ ВШЭ')
                 .openPopup();
         </script>
