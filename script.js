@@ -10,6 +10,15 @@ window.onload = function() {
             sendMessage();
         }
     });
+
+    // Запрашиваем доступ к микрофону пользователя
+    navigator.mediaDevices.getUserMedia({ audio: true })
+        .then(function(stream) {
+            // Микрофон доступен
+        })
+        .catch(function(err) {
+            console.error('Ошибка при доступе к микрофону:', err);
+        });
 };
 
 // Функция отправки сообщения
@@ -47,4 +56,73 @@ function simulateResponse(message) {
     setTimeout(function() {
         displayMessage('Бот', response);
     }, 1000); // Добавляем время задержки в миллисекундах, например, 1000 мс (1 с)
+}
+
+// Создаем экземпляр MediaRecorder для записи аудио
+let mediaRecorder;
+const chunks = [];
+
+function startRecording() {
+    mediaRecorder.start();
+}
+
+function stopRecording() {
+    mediaRecorder.stop();
+}
+
+// Обработчик события для кнопки начала записи
+document.getElementById('start-recording-button').addEventListener('click', function() {
+    navigator.mediaDevices.getUserMedia({ audio: true })
+        .then(function(stream) {
+            mediaRecorder = new MediaRecorder(stream);
+
+            mediaRecorder.ondataavailable = function(e) {
+                chunks.push(e.data);
+            }
+
+            mediaRecorder.onstop = function() {
+                const audioBlob = new Blob(chunks, { type: 'audio/wav' });
+                const audioUrl = URL.createObjectURL(audioBlob);
+                sendAudioMessage(audioUrl);
+            }
+
+            startRecording();
+        })
+        .catch(function(err) {
+            console.error('Ошибка при доступе к микрофону:', err);
+        });
+});
+
+// Обработчик события для кнопки остановки записи
+document.getElementById('stop-recording-button').addEventListener('click', function() {
+    stopRecording();
+});
+
+// Создаем экземпляр распознавания речи
+const recognition = new window.webkitSpeechRecognition();
+recognition.continuous = false;
+recognition.lang = 'ru-RU';
+
+recognition.onresult = function(event) {
+    const transcript = event.results[0][0].transcript;
+    // Отправляем распознанный текст в чат
+    sendMessage(transcript);
+}
+
+// Обработчик события для кнопки начала распознавания речи
+document.getElementById('start-speech-recognition-button').addEventListener('click', function() {
+    recognition.start();
+});
+
+// Обработчик события для кнопки остановки распознавания речи
+document.getElementById('stop-speech-recognition-button').addEventListener('click', function() {
+    recognition.stop();
+});
+
+// Функция отправки аудио сообщения в чат
+function sendAudioMessage(audioUrl) {
+    var audioElement = document.createElement('audio');
+    audioElement.controls = true;
+    audioElement.src = audioUrl;
+    displayMessage('Вы', audioElement.outerHTML);
 }
