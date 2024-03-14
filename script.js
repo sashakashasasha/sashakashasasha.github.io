@@ -46,4 +46,5 @@ function simulateResponse(message) {
     var response = responses[randomIndex];
     setTimeout(function() {
         displayMessage('Бот', response);
-    }, 
+    }, 1000); // Добавляем время задержки в миллисекундах, например, 1000 мс (1 с)
+}
