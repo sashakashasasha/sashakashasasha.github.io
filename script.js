@@ -45,11 +45,13 @@ function displayMessage(sender, message) {
 // Функция имитации ответа на сообщение
 function simulateResponse(message) {
     var responses = [
-        "Понял.",
-        "Спасибо за информацию.",
+        "Здравствуйте!",
+        "Хорошо, спасибо, как у вас?",
         "Это интересно!",
-        "Давайте обсудим это позже.",
-        "Какие у вас еще вопросы?"
+        "Какие у вас есть вопросы?",
+        "Что нового?"
+        "Буду рада ответить на все выши вопросы"
+        "Ответ поступит чуть позже. Ожидайте"
     ];
     var randomIndex = Math.floor(Math.random() * responses.length);
     var response = responses[randomIndex];
