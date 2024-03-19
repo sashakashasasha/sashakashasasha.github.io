@@ -51,7 +51,6 @@ function simulateResponse(message) {
         "Какие у вас есть вопросы?",
         "Что нового?"
         "Буду рада ответить на все выши вопросы"
-        "Ответ поступит чуть позже. Ожидайте"
     ];
     var randomIndex = Math.floor(Math.random() * responses.length);
     var response = responses[randomIndex];
