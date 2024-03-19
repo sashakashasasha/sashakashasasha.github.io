@@ -49,7 +49,7 @@ function simulateResponse(message) {
         "Хорошо, спасибо, как у вас?",
         "Это интересно!",
         "Какие у вас есть вопросы?",
-        "Что нового?"
+        "Что нового?",
         "Буду рада ответить на все выши вопросы"
     ];
     var randomIndex = Math.floor(Math.random() * responses.length);
